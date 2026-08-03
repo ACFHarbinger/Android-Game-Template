@@ -1,0 +1,13 @@
+# tools/reducer/justfile
+# Cleanup recipes.
+
+set shell := ["bash", "-c"]
+set working-directory := '../..'
+
+yellow := '\033[0;33m'
+reset := '\033[0m'
+
+# Clean all Gradle build outputs
+clean:
+    @echo -e "{{yellow}}Cleaning Gradle build outputs...{{reset}}"
+    ./gradlew clean

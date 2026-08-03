@@ -1,0 +1,19 @@
+# tools/validation/justfile
+# Formatting/static-analysis recipes — mirrored by .github/workflows/ci.yml.
+
+set shell := ["bash", "-c"]
+set working-directory := '../..'
+
+cyan := '\033[0;36m'
+green := '\033[0;32m'
+reset := '\033[0m'
+
+# Run ktlint + Android Lint
+check:
+    @echo -e "{{ cyan }}Running ktlint + Android Lint...{{ reset }}"
+    ./gradlew ktlintCheck lintDebug
+
+# Auto-fix ktlint formatting issues
+fix:
+    ./gradlew ktlintFormat
+    @echo -e "{{ green }}✓ Kotlin sources reformatted.{{ reset }}"

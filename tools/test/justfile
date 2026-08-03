@@ -1,0 +1,18 @@
+# tools/test/justfile
+# Unit + instrumented test recipes.
+
+set shell := ["bash", "-c"]
+set working-directory := '../..'
+
+cyan := '\033[0;36m'
+reset := '\033[0m'
+
+# Run unit tests (JVM, fast)
+unit:
+    @echo -e "{{cyan}}Running JVM unit tests...{{reset}}"
+    ./gradlew testDebugUnitTest
+
+# Run instrumented tests on a connected device/emulator
+instrumented:
+    @echo -e "{{cyan}}Running instrumented tests on connected device/emulator...{{reset}}"
+    ./gradlew connectedDebugAndroidTest

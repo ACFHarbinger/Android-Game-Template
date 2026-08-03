@@ -1,0 +1,24 @@
+# tools/build/justfile
+# Gradle build/install recipes — always invoked via ./gradlew, never a bare
+# `gradle`, so the pinned wrapper version (see
+# gradle/wrapper/gradle-wrapper.properties) is what actually runs.
+
+set shell := ["bash", "-c"]
+set working-directory := '../..'
+
+cyan := '\033[0;36m'
+reset := '\033[0m'
+
+# Assemble the debug APK
+debug:
+    @echo -e "{{cyan}}Assembling debug APK...{{reset}}"
+    ./gradlew assembleDebug
+
+# Assemble a signed release App Bundle (.aab) for the Play Store
+release:
+    @echo -e "{{cyan}}Assembling release bundle...{{reset}}"
+    ./gradlew bundleRelease
+
+# Install the debug build on a connected device/emulator
+install:
+    ./gradlew installDebug
