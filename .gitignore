@@ -1,0 +1,39 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android Studio / IntelliJ
+*.iws
+.idea/*
+!.idea/codeStyles
+!.idea/runConfigurations
+
+# Keystores — never commit signing material
+*.jks
+*.keystore
+
+# Log/profiling
+*.hprof
+
+# Gradle
+.gradle/
+/gradle/wrapper/gradle-wrapper.jar.sha256
+
+# Generated docs site
+/site
+
+# Env
+.env
+.kotlin/
