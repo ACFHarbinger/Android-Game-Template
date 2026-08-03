@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Discussion
+    # Update to wherever discussions happen on this instance (Forgejo/Gitea
+    # Discussions availability varies by version; a project wiki page or
+    # matrix/discord link is a common substitute). Left generic rather than
+    # assuming a URL this instance may not have.
+    url: https://codeberg.org/ACFHarbinger/Android-Game-Template/issues
+    about: For questions and general discussion, use your instance's discussion mechanism instead of an issue.
