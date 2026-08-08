@@ -33,7 +33,7 @@
 
 ## About
 
-`Android-Game-Template` is a GitHub template repository for a **Kotlin Android mobile game**. Unlike a generic app scaffold, it ships a real, working (if minimal) game skeleton: a `SurfaceView`-based render surface driven by a fixed-timestep game loop thread, following official Android Studio / Gradle Kotlin DSL conventions exactly — nothing about the `app/` module layout is bespoke. Around that core, it carries the same cross-cutting agentic/DevOps/docs framework (`.agent/`, `docs/`, `moon/`, `.github/`, `infra/`) used across this org's other project templates.
+`Android-Game-Template` is a GitHub template repository for a **Kotlin Android mobile game**. Unlike a generic app scaffold, it ships a real, working (if minimal) game skeleton: a `SurfaceView`-based render surface driven by a fixed-timestep game loop thread, following official Android Studio / Gradle Kotlin DSL conventions exactly — nothing about the `app/` module layout is bespoke. Around that core, it carries the same cross-cutting agentic/DevOps/docs framework (`.agent/`, `docs/`, `docs/moon/`, `.github/`, `infra/`) used across this org's other project templates.
 
 Use **"Use this template"** on GitHub to create a new repository, rename the package from `com.example.gametemplate`, and start building.
 
@@ -52,7 +52,7 @@ This template targets simple, dependency-light 2D games (arcade, puzzle, rogueli
 | `infra/` | **Optional** lightweight backend scaffolding for leaderboards/cloud save: `docker/`, `k8s/`, `helm/`, `terraform/`, `ansible/` — not needed for an offline game |
 | `docs/` | MkDocs site, architecture notes, ADRs |
 | `git/` | `CONTRIBUTING.md` and `codecov.yaml` |
-| `moon/` | `ROADMAP.md`, `CHANGELOG.md`, and per-topic roadmaps |
+| `docs/moon/` | `ROADMAP.md`, `CHANGELOG.md`, and per-topic roadmaps |
 | `gradle/`, `gradlew`, `gradlew.bat`, `build.gradle.kts`, `gradle.properties`, `settings.gradle.kts` | Root Gradle wrapper + build files including `:app` |
 
 ## Quick Start

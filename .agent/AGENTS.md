@@ -25,7 +25,7 @@
 
 > **TODO:** Replace with a one-paragraph description of the actual game once this template seeds a real project.
 
-This repository is a scaffold for a **Kotlin Android mobile game**, not a product. It ships a single, real `app/` module — a minimal but functional 2D game skeleton built on `SurfaceView` + a fixed-timestep game loop thread — plus the cross-cutting agentic/DevOps/docs framework shared across this org's other templates (`.agent/`, `docs/`, `moon/`, `.github/`, `infra/`). When used via "Use this template", update this section first.
+This repository is a scaffold for a **Kotlin Android mobile game**, not a product. It ships a single, real `app/` module — a minimal but functional 2D game skeleton built on `SurfaceView` + a fixed-timestep game loop thread — plus the cross-cutting agentic/DevOps/docs framework shared across this org's other templates (`.agent/`, `docs/`, `docs/moon/`, `.github/`, `infra/`). When used via "Use this template", update this section first.
 
 ### 1.1 Why SurfaceView + Canvas, not Compose or a game engine
 

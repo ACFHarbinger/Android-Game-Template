@@ -2,7 +2,7 @@
 
 ## Summary
 
-<!-- What does this PR change and why? Link the roadmap item (moon/ROADMAP.md or a module roadmap in moon/roadmaps/). -->
+<!-- What does this PR change and why? Link the roadmap item (docs/moon/ROADMAP.md or a module roadmap in moon/roadmaps/). -->
 
 ## Affected Area(s)
 
@@ -26,4 +26,4 @@
 - [ ] `just lint-check` and `just unit-test` pass.
 - [ ] `just test-instrumented` run for lifecycle/UI-affecting changes.
 - [ ] No allocations introduced in the `GameLoop` update/render hot path (see `.agent/rules/game_loop_performance.md`).
-- [ ] Docs / roadmap / `moon/CHANGELOG.md` updated where the public surface changed.
+- [ ] Docs / roadmap / `docs/moon/CHANGELOG.md` updated where the public surface changed.
