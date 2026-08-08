@@ -37,3 +37,7 @@ local.properties
 # Env
 .env
 .kotlin/
+
+# Python build & cache artifacts
+__pycache__/
+*.egg-info/
