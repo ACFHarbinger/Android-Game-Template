@@ -1,11 +1,13 @@
 # Contributing to Android-Game-Template
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
-[![Android](https://img.shields.io/badge/Android-API_24%2B-3DDC84?logo=android&logoColor=white)](https://developer.android.com/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776ab?logo=python&logoColor=white)](https://www.python.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Rust](https://img.shields.io/badge/Rust-1.80%2B-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![CI](https://github.com/ACFHarbinger/Android-Game-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/ACFHarbinger/Android-Game-Template/actions/workflows/ci.yml)
 
 > **Version**: 1.0
-> **Last Updated**: 2026-08-02
+> **Last Updated**: 2026-07-30
 
 Thank you for your interest in contributing! This document covers setup, style, and the PR process for repositories generated from this template.
 
@@ -27,7 +29,7 @@ Thank you for your interest in contributing! This document covers setup, style, 
 
 ### 1.1 Prerequisites
 
-- Android Studio (or JDK 17 + Android SDK cmdline-tools), Android SDK Platform 35 + Build-Tools 35.0.0.
+- Git, and the toolchain(s) for whichever language module(s) you're touching: `uv` (Python), `npm` (TypeScript), Gradle/JDK 21 (Kotlin), `cargo` (Rust), Go 1.22+ (Go), CMake + a C++17 compiler (C++).
 - [`just`](https://github.com/casey/just) as the command runner.
 - `pre-commit` (`pip install pre-commit && pre-commit install`).
 
@@ -36,16 +38,17 @@ Thank you for your interest in contributing! This document covers setup, style, 
 ```bash
 git clone https://github.com/<org>/<repo>.git
 cd <repo>
+cp .env.example .env
 just --list
 ```
 
 ## 2. Development Setup
 
-The single product module is `app/`, a standard Android Studio Gradle module. See [`docs/DEVELOPMENT.md`](../docs/DEVELOPMENT.md) and [`.devcontainer/devcontainer.json`](../.devcontainer/devcontainer.json) for a one-click containerized setup.
+Each language module is self-contained under its own top-level directory (`python/`, `typescript/`, `kotlin/`, `rust/`, `go/`, `cpp/`) with its own dependency manifest, `src/`, `test/`, `benchmark/`, and `config/`. See `.devcontainer/devcontainer.json` for a one-click containerized setup.
 
 ## 3. Code Style Guidelines
 
-Follow [`.agent/rules/kotlin.md`](../.agent/rules/kotlin.md) and the rest of `.agent/rules/`. Formatting/linting is automated via `.pre-commit-config.yaml` — run `pre-commit run --all-files` before pushing.
+Follow the per-language rules in [`.agent/rules/`](../.agent/rules/). All modules are linted/formatted automatically via `.pre-commit-config.yaml` — run `pre-commit run --all-files` before pushing.
 
 ## 4. Git Workflow
 
@@ -62,7 +65,7 @@ Follow [`.agent/rules/kotlin.md`](../.agent/rules/kotlin.md) and the rest of `.a
 
 ## 6. Testing Requirements
 
-Every new `engine/` class needs a unit test; every new lifecycle/UI-touching change needs an instrumented test. See [`.agent/rules/testing_qa.md`](../.agent/rules/testing_qa.md).
+Every new public function/class needs a test. See [`.agent/rules/test_writing.md`](../.agent/rules/test_writing.md).
 
 ## 7. Issue Reporting
 
