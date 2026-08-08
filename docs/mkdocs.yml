@@ -40,6 +40,14 @@ plugins:
   - search
 
 nav:
+  - Game Design:
+      - Overview: design/game_design_document.md
+      - Pitch Deck: design/pitch_deck.md
+      - Technical Design: design/technical_design_document.md
+      - Art Bible: design/art_bible.md
+      - Audio Design: design/audio_design_document.md
+      - Production Roadmap: design/production_roadmap.md
+      - QA Test Plan: design/qa_test_plan.md
   - Documentation Standards: DOCUMENTATION_STANDARDS.md
   - Benchmarks: BENCHMARKS.md
   - Dependencies: DEPENDENCIES.md
