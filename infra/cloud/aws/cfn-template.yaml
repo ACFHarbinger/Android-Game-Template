@@ -7,7 +7,7 @@ Description: Serverless Backend stack for the Android Game Template.
 
 Resources:
   # DynamoDB Database Table
-  Android_game_templateTable:
+  AndroidGameTemplateTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
       PrimaryKey:
@@ -18,7 +18,7 @@ Resources:
         WriteCapacityUnits: 5
 
   # Lambda Function
-  Android_game_templateFunction:
+  AndroidGameTemplateFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: handler.lambda_handler
@@ -26,10 +26,10 @@ Resources:
       CodeUri: ./src
       Environment:
         Variables:
-          TABLE_NAME: !Ref Android_game_templateTable
+          TABLE_NAME: !Ref AndroidGameTemplateTable
       Policies:
         - DynamoDBCrudPolicy:
-            TableName: !Ref Android_game_templateTable
+            TableName: !Ref AndroidGameTemplateTable
       Events:
         ApiEvent:
           Type: Api
